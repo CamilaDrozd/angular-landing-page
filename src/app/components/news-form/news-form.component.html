@@ -5,13 +5,20 @@
     </h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem veritatis adipisci perferendis magnam asperiores a mollitia corrupti, maiores consequatur ipsa recusandae alias excepturi, modi in minus autem quis fuga?Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus rem veritatis adipisci perferendis asperiores mollitia corrupti, maiores consequatur ipsa recusandae alias excepturi, modi in minus autem quis fuga</p>
   </div>
-<form>
+<form [formGroup]="newsletterForm">
   <label for="name">Name</label>
-  <input id="name"/>
+  <input id="name" formControlName="name"/>
 
   <label for="email">Email</label>
-  <input id="email"/>
+  <input id="email" formControlName="email"/>
 
-  <btn-primary btn-text="Se inscreva" variant="secondary"></btn-primary>
+  <btn-primary 
+  btn-text="Se inscreva" 
+  variant="secondary"
+  (submit)="onSubmit()"
+  [disabled]="!newsletterForm.valid"
+  [loading]="loading()"
+  >
+</btn-primary>
 </form>
 </section>
