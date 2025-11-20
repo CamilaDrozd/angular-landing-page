@@ -24,6 +24,7 @@ main{
     font-size: 72px;
     font-weight: 900;
     color: $primary-text;
+    margin-right: 70px;
   }
 }
 
@@ -58,6 +59,12 @@ main{
       font-style: normal;
     }
   }
+}
+
+.cta-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 1080px) {
